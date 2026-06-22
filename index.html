@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Phuong Nguyen | PhD Candidate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --primary:#0b3d91;
+  --green:#22c55e;
+  --dark:#0f172a;
+  --gray:#64748b;
+  --border:#e2e8f0;
+  --bg:#f8fafc;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--dark);
+  background:white;
+  line-height:1.7;
+}
+
+.container{
+  width:min(1100px,90%);
+  margin:auto;
+}
+
+section{
+  padding:90px 0;
+}
+
+h2{
+  font-size:2.2rem;
+  margin-bottom:25px;
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--green));
+  color:white;
+}
+
+.hero h1{
+  font-size:3.8rem;
+  font-weight:800;
+}
+
+.hero h2{
+  font-weight:400;
+  margin-top:10px;
+}
+
+.hero p{
+  margin-top:25px;
+  max-width:800px;
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.btn-light{
+  background:white;
+  color:var(--dark);
+}
+
+.btn-outline{
+  border:2px solid white;
+  color:white;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:15px;
+  background:white;
+}
+
+/* TIMELINE */
+
+.timeline{
+  border-left:3px solid var(--primary);
+  padding-left:20px;
+}
+
+.event{
+  margin-bottom:25px;
+}
+
+.timeline-wrapper{
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+}
+
+/* center vertical line */
+.center-line{
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(var(--primary), var(--green));
+  transform:translateX(-50%);
+}
+
+/* columns */
+.timeline-column{
+  width:48%;
+}
+
+.timeline-title{
+  margin-bottom:20px;
+  font-size:1.4rem;
+  color:var(--primary);
+}
+
+/* event cards */
+.event{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:15px 18px;
+  margin-bottom:20px;
+  position:relative;
+}
+
+/* left side alignment */
+.left .event{
+  text-align:right;
+}
+
+/* right side alignment */
+.right .event{
+  text-align:left;
+}
+
+/* small accent dot */
+.event::before{
+  content:"";
+  position:absolute;
+  top:18px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--green);
+}
+
+.left .event::before{
+  right:-6px;
+}
+
+.right .event::before{
+  left:-6px;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .timeline-wrapper{
+    flex-direction:column;
+  }
+
+  .center-line{
+    display:none;
+  }
+
+  .timeline-column{
+    width:100%;
+  }
+
+  .left .event,
+  .right .event{
+    text-align:left;
+  }
+
+  .event::before{
+    left:-6px;
+    right:auto;
+  }
+}
+
+/* SKILLS */
+
+.skills span{
+  display:inline-block;
+  background:var(--bg);
+  border:1px solid var(--border);
+  padding:8px 12px;
+  border-radius:20px;
+  margin:5px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:linear-gradient(135deg,var(--primary),var(--green));
+  color:white;
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:var(--gray);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+  <div><strong>Phuong Nguyen</strong></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+
+<h1>Nguyen Thi Mai Phuong</h1>
+
+<h2>PhD Candidate in Computer Science</h2>
+
+<p>
+University of Pau and the Pays de l'Adour (UPPA)<br><br>
+
+Researching <strong>Sustainable Computing</strong> by analyzing
+and detecting software energy anomalies using software traces,
+logs, and AI techniques.<br><br>
+
+Background in Cryptography, Security, Privacy, and Software Engineering.
+</p>
+
+<div class="buttons">
+<a class="btn btn-light" href="#research">Research</a>
+<a class="btn btn-outline" href="https://github.com/phuongntmse">GitHub</a>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<h2>About Me</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Research Focus</h3>
+<p>
+I study how software systems consume energy and how we can detect
+anomalies in their energy behavior using logs, traces, and AI.
+</p>
+</div>
+
+<div class="card">
+<h3>Background</h3>
+<p>
+Master in Cryptology & Information Security (University of Limoges).
+Experience in software development (Gameloft, FPT Software) and research internships (INRIA Privatics).
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+<div class="container">
+
+<h2>Research Areas</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌱 Sustainable Computing</h3>
+<p>Energy anomalies, green software, carbon-aware systems.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI for Software Engineering</h3>
+<p>Log analysis, trace mining, anomaly detection.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Privacy & Security</h3>
+<p>Consent management, cryptography, secure systems.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Energy Anomaly Detection (PhD)</h3>
+<p>Detecting abnormal energy consumption patterns in software using traces and logs.</p>
+</div>
+
+<div class="card">
+<h3>Consent Management Study</h3>
+<p>Analysis of Android consent management platforms (INRIA Privatics).</p>
+</div>
+
+<div class="card">
+<h3>Secure IoT Streaming System</h3>
+<p>Enhanced Kafka/Zookeeper security using cryptographic matching.</p>
+</div>
+
+<div class="card">
+<h3>Food Traceability App</h3>
+<p>Android app verifying food quality using QR and certification data.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+<section id="timeline">
+<div class="container">
+
+<h2>Academic & Professional Timeline</h2>
+
+<div class="timeline-wrapper">
+
+  <!-- CENTER LINE -->
+  <div class="center-line"></div>
+
+  <!-- ACADEMIC (LEFT) -->
+  <div class="timeline-column left">
+
+    <h3 class="timeline-title">🎓 Academic</h3>
+
+    <div class="event">
+      <strong>2023 – Present</strong>
+      <p>PhD in Computer Science</p>
+      <span>UPPA (LIUPPA) — Sustainable Computing & Energy Anomaly Detection</span>
+    </div>
+
+    <div class="event">
+      <strong>2020 – 2022</strong>
+      <p>Master in Cryptology & Information Security</p>
+      <span>University of Limoges</span>
+    </div>
+
+    <div class="event">
+      <strong>2013 – 2017</strong>
+      <p>Bachelor of Software Engineering</p>
+      <span>FPT University, Vietnam</span>
+    </div>
+
+  </div>
+
+  <!-- PROFESSIONAL (RIGHT) -->
+  <div class="timeline-column right">
+
+    <h3 class="timeline-title">💼 Professional</h3>
+
+    <div class="event">
+      <strong>2022</strong>
+      <p>Research Internship</p>
+      <span>INRIA Privatics / CITI Lab</span>
+    </div>
+
+    <div class="event">
+      <strong>2017 – 2020</strong>
+      <p>Game Programmer</p>
+      <span>Gameloft Hanoi</span>
+    </div>
+
+    <div class="event">
+      <strong>2016 – 2017</strong>
+      <p>Software Developer</p>
+      <span>FPT Software</span>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<div class="container">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<span>Python</span>
+<span>Java</span>
+<span>C/C++</span>
+<span>Software Engineering</span>
+<span>Cryptography</span>
+<span>Cybersecurity</span>
+<span>Machine Learning</span>
+<span>Green IT</span>
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<div class="container">
+
+<h2>Contact</h2>
+
+<p>Email: phuongntmse@gmail.com</p>
+<p>GitHub: github.com/phuongntmlc</p>
+<p>LinkedIn: linkedin.com/in/phuongntmlc</p>
+
+</div>
+</section>
+
+<footer>
+© 2026 Phuong Nguyen
+</footer>
+
+</body>
+</html>
