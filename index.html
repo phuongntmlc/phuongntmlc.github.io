@@ -324,28 +324,203 @@ footer {
 <div class="container">
   <h2>Research &amp; Publications</h2>
 
-  <div class="research-item">
-    <h3>🌱 Energy Anomaly Detection in Software Systems</h3>
-    <p>
-      My doctoral research investigates the detection of
-      software energy anomalies using traces, logs, and AI techniques.
-    </p>
-    <div class="links">
-      <a href="papers/phd-proposal.pdf">📄 PDF</a>
-      <a href="https://github.com/phuongntmse/project-name">💻 Code</a>
+<div class="research-item">
+
+  <h3>
+    🌱 Toward Energy-Aware Software Engineering
+  </h3>
+
+  <p class="research-subtitle">
+    PhD Research · 2023–Present
+  </p>
+
+  <p>
+    My doctoral research investigates how routine software and system
+    traces can enable energy awareness in software systems without
+    relying on dedicated energy monitoring infrastructure.
+
+    The work spans energy estimation, workload classification,
+    and behavioral fingerprinting using software traces,
+    execution logs, and machine learning techniques.
+  </p>
+
+  <p>
+    <strong>Main Research Question:</strong><br>
+    To what extent can routine software and system traces enable
+    energy awareness in software systems without relying on
+    dedicated energy monitoring infrastructure?
+  </p>
+
+  <!--<div class="links">-->
+  <!--  <a href="pdf-files/phd-proposal.pdf" target="_blank">-->
+  <!--    📄 Thesis Proposal-->
+  <!--  </a>-->
+
+  <!--  <a href="https://github.com/phuongntmse" target="_blank">-->
+  <!--    💻 Research Code-->
+  <!--  </a>-->
+  <!--</div>-->
+
+  <div class="publication-list">
+    <h4>Related Publications</h4>
+    <div class="publication">
+      <strong>
+        [An Empirical Study on Estimating Energy Consumption From Software Traces]
+      </strong>
+      <br>
+      BDCAT 2025
+      <div class="links">
+        <a href="pdf-files/3773276.3774295.pdf" target="_blank">
+          📄 PDF
+        </a>
+        <a href="https://doi.org/10.1145/3773276.3774295" target="_blank">
+          🔗 DOI
+        </a>
+      </div>
     </div>
   </div>
+</div>
 
   <div class="research-item">
-    <h3>🔒 Consent Management Platforms in Android Applications</h3>
-    <p>
-      Research internship conducted at INRIA Privatics.
-      Study of consent management platforms in the Android ecosystem.
-    </p>
-    <div class="links">
-      <a href="papers/cmp-study.pdf">📄 Paper</a>
-    </div>
+
+  <h3>🔒 Consent Management Platforms in Android Applications</h3>
+
+  <p class="research-subtitle">
+    Master's Research Internship · 2022
+  </p>
+
+  <p>
+    This project investigated how mobile applications implement consent
+    management mechanisms to comply with modern privacy regulations such as
+    the GDPR. While consent management has been extensively studied on the
+    web, mobile applications remain less explored despite their widespread
+    collection and sharing of personal data.
+  </p>
+
+  <p>
+    Through large-scale analysis and experimentation, I studied how Android
+    applications integrate Consent Management Platforms (CMPs), identified
+    common CMP providers, and explored methods for detecting their presence
+    within applications. The study also examined potential privacy risks
+    associated with these platforms and highlighted future research
+    directions for privacy transparency in mobile ecosystems.
+  </p>
+
+  <div class="links">
+    <a href="pdf-files/cmp_Report.pdf" target="_blank">
+      📄 Report
+    </a>
+
   </div>
+
+</div>
+
+<div class="research-item">
+
+  <h3>🛡 Securing Event Streaming Platforms for IoT using Apache Kafka</h3>
+
+  <p class="research-subtitle">
+    Master's Research Project · 2021
+  </p>
+
+  <p>
+    This project explored security challenges in outsourced event-streaming
+    infrastructures for IoT applications. While Apache Kafka provides a
+    scalable and reliable platform for processing large volumes of data,
+    sensitive information remains exposed to third-party infrastructure
+    providers.
+  </p>
+
+  <p>
+    To address this issue, we designed and implemented a privacy-preserving
+    matching scheme integrated with Apache ZooKeeper. The proposed approach
+    enables producers and consumers to communicate through encrypted topic
+    identifiers, allowing authorized entities to discover and subscribe to
+    data streams without revealing the original topic names to the Kafka
+    server.
+  </p>
+
+  <p>
+    The project included the implementation of the matching algorithm as a
+    reusable Java library, the development of Kafka producer and consumer
+    applications, and the simulation of secure communication across multiple
+    Kafka servers. This work demonstrates how confidentiality can be enhanced
+    in distributed event-streaming systems while preserving scalability.
+  </p>
+
+  <div class="links">
+    <a href="pdf-files/Kafka_s2.pdf" target="_blank">
+      📄 Project Report
+    </a>
+    <a href="https://github.com/phuongntmlc/SecuringKafka" target="_blank">
+      💻 Code
+    </a>
+  </div>
+
+</div>
+
+<div class="research-item">
+
+  <h3>🤖 Anti-Spam Detection using Machine Learning</h3>
+
+  <p>
+    This project investigated the application of machine learning techniques
+    for email spam detection. Using a labeled dataset of legitimate and spam
+    messages, we implemented and evaluated two classification approaches:
+    Naive Bayes Networks and Artificial Neural Networks.
+  </p>
+
+  <div class="links">
+    <a href="pdf-files/anti-spam-ml.pdf" target="_blank">
+      📄 Project Report
+    </a>
+    <a href="https://github.com/phuongntmlc/AI2_AntiSpam" target="_blank">
+      💻 Code
+    </a>
+
+  </div>
+
+</div>
+
+<div class="research-item">
+
+  <h3>📱 Trusted Food Supply Chain System using QR Code Verification</h3>
+
+  <p class="research-subtitle">
+    Bachelor's Capstone Project (Final Year Project) · 2017
+  </p>
+
+  <p>
+    This capstone project focuses on building a complete food
+    traceability system that connects producers, transporters, sellers, and
+    consumers through QR code-based verification.
+  </p>
+
+  <p>
+    The system consists of a management web platform operated by a competent
+    authority, where producers, transporters, and sellers must register their
+    product-related information. All submitted data is verified and approved
+    by an administrator before being validated in the system.
+  </p>
+
+  <p>
+    Once approved, a unique QR code is automatically generated and sent to the
+    registrant via email. This QR code is attached to the physical product
+    and serves as a secure identifier linking the product to its entire supply
+    chain history.
+  </p>
+
+  <p>
+    Consumers can scan the QR code using an Android application to access full
+    product information, including details about the producer, transporter,
+    seller, and origin of the product, ensuring transparency and trust in the
+    food supply chain.
+  </p>
+
+  <a href="https://dantri.com.vn/giao-duc/sinh-vien-fpt-giai-bai-toan-an-toan-thuc-pham-truoc-them-tet-mau-tuat-20171222155313684.htm" target="_blank"> 📰 Featured in Dan Tri (Vietnamese national online newspaper) </a>
+
+</div>
+
 </div>
 </section>
 
