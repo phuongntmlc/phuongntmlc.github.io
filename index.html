@@ -1,592 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Phuong Nguyen | PhD Candidate</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Phuong Nguyen - PhD Candidate in Computer Science specializing in sustainable computing, privacy, security and machine learning.">
 
-:root {
-  --primary: #0b3d91;
-  --green: #22c55e;
-  --dark: #0f172a;
-  --gray: #64748b;
-  --border: #e2e8f0;
-  --bg: #f8fafc;
-}
+    <meta name="author" content="Phuong Nguyen">
+    <title>Phuong Nguyen | PhD Candidate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico">
+    <style>
+        :root {
+            --primary: #0b3d91;
+            --green: #22c55e;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --bg: #f8fafc;
+        }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html {
-  scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--dark);
-  background: white;
-  line-height: 1.7;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: white;
+            line-height: 1.7;
+        }
 
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
 
-section {
-  padding: 90px 0;
-}
+        section {
+            padding: 90px 0;
+        }
 
-h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-}
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
 
-/* HERO */
+        /* HERO */
 
-.hero {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--primary), var(--green));
-  color: white;
-}
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary), var(--green));
+            color: white;
+        }
 
-.hero h1 {
-  font-size: 3.8rem;
-  font-weight: 800;
-}
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+        }
 
-.hero h2 {
-  font-weight: 400;
-  margin-top: 10px;
-}
+        .hero h2 {
+            font-weight: 400;
+            margin-top: 10px;
+        }
 
-.hero p {
-  margin-top: 25px;
-  max-width: 900px;
-}
+        .hero p {
+            margin-top: 25px;
+            max-width: 900px;
+        }
 
-.hero-buttons {
-  margin-top: 25px;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
+        .hero-buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
 
-.btn-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  border: 1.5px solid rgba(255,255,255,0.5);
-  color: white;
-  text-decoration: none;
-  transition: background 0.2s, border-color 0.2s;
-}
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
 
-.btn-icon:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: white;
-}
+        .btn-icon:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+        }
 
-.btn-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
+        .btn-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
 
-/* CARDS */
+        .btn-icon:focus-visible,
+        .links a:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 3px;
+        }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
+        /* CARDS */
 
-.card {
-  border: 1px solid var(--border);
-  padding: 25px;
-  border-radius: 15px;
-  background: white;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
 
-/* SKILLS */
+        .card {
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+        }
 
-.skills span {
-  display: inline-block;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 20px;
-  margin: 5px;
-}
+        /* SKILLS */
 
-/* RESEARCH OUTPUT */
+        .skills span {
+            display: inline-block;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin: 5px;
+        }
 
-.research-item {
-  margin-bottom: 30px;
-}
+        /* RESEARCH OUTPUT */
 
-.research-item h3 {
-  margin-bottom: 8px;
-}
+        .research-item {
+            margin-bottom: 30px;
+        }
 
-.research-item .links {
-  margin-top: 10px;
-  display: flex;
-  gap: 15px;
-}
+        .research-item h3 {
+            margin-bottom: 8px;
+        }
 
-.research-item .links a {
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 500;
-}
+        .research-item .links {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+        }
 
-/* TIMELINE */
+        .research-item .links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+        }
 
-.timeline-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
+        /* TIMELINE */
 
-.center-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(var(--primary), var(--green));
-  transform: translateX(-50%);
-}
+        .timeline-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
 
-.timeline-column {
-  width: 48%;
-}
+        .center-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(var(--primary), var(--green));
+            transform: translateX(-50%);
+        }
 
-.timeline-title {
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  color: var(--primary);
-}
+        .timeline-column {
+            width: 48%;
+        }
 
-.event {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 15px 18px;
-  margin-bottom: 20px;
-  position: relative;
-}
+        .timeline-title {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
 
-.left .event {
-  text-align: right;
-}
+        .event {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 18px;
+            margin-bottom: 20px;
+            position: relative;
+        }
 
-.right .event {
-  text-align: left;
-}
+        .left .event {
+            text-align: right;
+        }
 
-.event::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--green);
-}
+        .right .event {
+            text-align: left;
+        }
 
-.left .event::before {
-  right: -6px;
-}
+        .event::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--green);
+        }
 
-.right .event::before {
-  left: -6px;
-}
+        .left .event::before {
+            right: -6px;
+        }
+
+        .right .event::before {
+            left: -6px;
+        }
 
 
-footer {
-  text-align: center;
-  padding: 25px;
-  color: var(--gray);
-}
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--gray);
+        }
 
-@media (max-width: 900px) {
-  .timeline-wrapper {
-    flex-direction: column;
-  }
+        @media (max-width: 1000px) {
+            .timeline-wrapper {
+                flex-direction: column;
+            }
 
-  .center-line {
-    display: none;
-  }
+            .center-line {
+                display: none;
+            }
 
-  .timeline-column {
-    width: 100%;
-  }
+            .timeline-column {
+                width: 100%;
+            }
 
-  .left .event,
-  .right .event {
-    text-align: left;
-  }
+            .left .event,
+            .right .event {
+                text-align: left;
+            }
 
-  .event::before {
-    left: -6px;
-    right: auto;
-  }
-}
+            .event::before {
+                left: -6px;
+                right: auto;
+            }
+        }
 
-</style>
+        .quote {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .research-subtitle {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .publication-list {
+            margin-top: 20px;
+        }
+
+        .publication {
+            padding: 15px;
+            margin-top: 12px;
+            background: var(--bg);
+            border-radius: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .research-item {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            transition: transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container">
-  <h1>Phuong Nguyen</h1>
-  <h2>PhD Candidate in Computer Science</h2>
-  <p class="quote">
-    Technology should respect privacy, consume resources responsibly, and contribute to a sustainable digital future.
-  </p>
-  <div class="hero-buttons">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/phuongntmlc/" class="btn-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <!-- Google Scholar -->
-    <a href="https://scholar.google.com/citations?user=BRTOBl4AAAAJ&hl=en" class="btn-icon" aria-label="Google Scholar" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
-    </a>
-    <!-- GitHub -->
-    <a href="https://github.com/phuongntmlc" class="btn-icon" aria-label="GitHub" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-    </a>
-    <!-- X / Twitter -->
-    <a href="https://x.com/_phuongntm" class="btn-icon" aria-label="X (Twitter)" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-    </a>
-    <!-- Email -->
-    <a href="mailto:phuongntmse@gmail.com" class="btn-icon" aria-label="Email">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-    </a>
-  </div>
-</div>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Phuong Nguyen</h1>
+            <p class="hero-subtitle">PhD Candidate in Computer Science</p>
+            <p class="quote">
+                Technology should respect privacy, consume resources responsibly, and contribute to a sustainable digital future.
+            </p>
+            <div class="hero-buttons">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/phuongntmlc/" class="btn-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.com/citations?user=BRTOBl4AAAAJ&amp;hl=en" class="btn-icon" aria-label="Google Scholar" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z" />
+                    </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/phuongntmlc" class="btn-icon" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <!-- X / Twitter -->
+                <a href="https://x.com/_phuongntm" class="btn-icon" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:phuongntmse@gmail.com" class="btn-icon" aria-label="Email">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- RESEARCH AREAS -->
-<section id="research">
-<div class="container">
-  <h2>Research Areas</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🌱 Sustainable Computing</h3>
-    </div>
-    <div class="card">
-      <h3>🤖 ML for Classification</h3>
-    </div>
-    <div class="card">
-      <h3>🔒 Privacy &amp; Security</h3>
-    </div>
-  </div>
-</div>
-</section>
+    <!-- RESEARCH AREAS -->
+    <section id="research">
+        <div class="container">
+            <h2>Research Areas</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌱 Sustainable Computing</h3>
+                </div>
+                <div class="card">
+                    <h3>🤖 ML for Classification</h3>
+                </div>
+                <div class="card">
+                    <h3>🔒 Privacy &amp; Security</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- SKILLS -->
-<section>
-<div class="container">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Python</span>
-    <span>Java</span>
-    <span>C/C++</span>
-    <span>Software Engineering</span>
-    <span>Cryptography</span>
-    <span>Cybersecurity</span>
-    <span>Machine Learning</span>
-    <span>Green IT</span>
-  </div>
-</div>
-</section>
+    <!-- SKILLS -->
+    <section>
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C/C++</span>
+                <span>Software Engineering</span>
+                <span>Cryptography</span>
+                <span>Cybersecurity</span>
+                <span>Machine Learning</span>
+                <span>Green IT</span>
+            </div>
+        </div>
+    </section>
 
-<!-- RESEARCH OUTPUT -->
-<section id="research-output">
-<div class="container">
-  <h2>Research &amp; Publications</h2>
+    <!-- RESEARCH OUTPUT -->
+    <section id="research-output">
+        <div class="container">
+            <h2>Research &amp; Publications</h2>
 
-<div class="research-item">
+            <article class="research-item">
 
-  <h3>
-    🌱 Toward Energy-Aware Software Engineering
-  </h3>
+                <h3>
+                    🌱 Toward Energy-Aware Software Engineering
+                </h3>
 
-  <p class="research-subtitle">
-    PhD Research · 2023–Present
-  </p>
+                <p class="research-subtitle">
+                    PhD Research · 2023–Present
+                </p>
 
-  <p>
-    My doctoral research investigates how routine software and system
-    traces can enable energy awareness in software systems without
-    relying on dedicated energy monitoring infrastructure.
+                <p>
+                    My doctoral research investigates how routine software and system
+                    traces can enable energy awareness in software systems without
+                    relying on dedicated energy monitoring infrastructure.
 
-    The work spans energy estimation, workload classification,
-    and behavioral fingerprinting using software traces,
-    execution logs, and machine learning techniques.
-  </p>
+                    The work spans energy estimation, workload classification,
+                    and behavioral fingerprinting using software traces,
+                    execution logs, and machine learning techniques.
+                </p>
 
-  <p>
-    <strong>Main Research Question:</strong><br>
-    To what extent can routine software and system traces enable
-    energy awareness in software systems without relying on
-    dedicated energy monitoring infrastructure?
-  </p>
+                <p>
+                    <strong>Main Research Question:</strong><br>
+                    To what extent can routine software and system traces enable
+                    energy awareness in software systems without relying on
+                    dedicated energy monitoring infrastructure?
+                </p>
 
-  <!--<div class="links">-->
-  <!--  <a href="pdf-files/phd-proposal.pdf" target="_blank">-->
-  <!--    📄 Thesis Proposal-->
-  <!--  </a>-->
+                <!--<div class="links">-->
+                <!--  <a href="pdf-files/phd-proposal.pdf" target="_blank">-->
+                <!--    📄 Thesis Proposal-->
+                <!--  </a>-->
 
-  <!--  <a href="https://github.com/phuongntmse" target="_blank">-->
-  <!--    💻 Research Code-->
-  <!--  </a>-->
-  <!--</div>-->
+                <!--  <a href="https://github.com/phuongntmse" target="_blank">-->
+                <!--    💻 Research Code-->
+                <!--  </a>-->
+                <!--</div>-->
 
-  <div class="publication-list">
-    <h4>Related Publications</h4>
-    <div class="publication">
-      <strong>
-        [An Empirical Study on Estimating Energy Consumption From Software Traces]
-      </strong>
-      <br>
-      BDCAT 2025
-      <div class="links">
-        <a href="pdf-files/3773276.3774295.pdf" target="_blank">
-          📄 PDF
-        </a>
-        <a href="https://doi.org/10.1145/3773276.3774295" target="_blank">
-          🔗 DOI
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="publication-list">
+                    <h4>Related Publications</h4>
+                    <div class="publication">
+                        <strong>
+                            An Empirical Study on Estimating Energy Consumption From Software Traces
+                        </strong>
+                        <br>
+                        BDCAT 2025
+                        <div class="links">
+                            <a href="pdf-files/3773276.3774295.pdf" target="_blank" rel="noopener noreferrer">
+                                📄 PDF
+                            </a>
+                            <a href="https://doi.org/10.1145/3773276.3774295" target="_blank" rel="noopener noreferrer">
+                                🔗 DOI
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-  <div class="research-item">
+            <article class="research-item">
 
-  <h3>🔒 Consent Management Platforms in Android Applications</h3>
+                <h3>🔒 Consent Management Platforms in Android Applications</h3>
 
-  <p class="research-subtitle">
-    Master's Research Internship · 2022
-  </p>
+                <p class="research-subtitle">
+                    Master's Research Internship · 2022
+                </p>
 
-  <p>
-    This project investigated how mobile applications implement consent
-    management mechanisms to comply with modern privacy regulations such as
-    the GDPR. While consent management has been extensively studied on the
-    web, mobile applications remain less explored despite their widespread
-    collection and sharing of personal data.
-  </p>
+                <p>
+                    This project investigated how mobile applications implement consent
+                    management mechanisms to comply with modern privacy regulations such as
+                    the GDPR. While consent management has been extensively studied on the
+                    web, mobile applications remain less explored despite their widespread
+                    collection and sharing of personal data.
+                </p>
 
-  <p>
-    Through large-scale analysis and experimentation, I studied how Android
-    applications integrate Consent Management Platforms (CMPs), identified
-    common CMP providers, and explored methods for detecting their presence
-    within applications. The study also examined potential privacy risks
-    associated with these platforms and highlighted future research
-    directions for privacy transparency in mobile ecosystems.
-  </p>
+                <p>
+                    Through large-scale analysis and experimentation, I studied how Android
+                    applications integrate Consent Management Platforms (CMPs), identified
+                    common CMP providers, and explored methods for detecting their presence
+                    within applications. The study also examined potential privacy risks
+                    associated with these platforms and highlighted future research
+                    directions for privacy transparency in mobile ecosystems.
+                </p>
 
-  <div class="links">
-    <a href="pdf-files/cmp_Report.pdf" target="_blank">
-      📄 Report
-    </a>
+                <div class="links">
+                    <a href="pdf-files/cmp_Report.pdf" target="_blank" rel="noopener noreferrer">
+                        📄 Report
+                    </a>
 
-  </div>
+                </div>
 
-</div>
+            </article>
 
-<div class="research-item">
+            <article class="research-item">
 
-  <h3>🛡 Securing Event Streaming Platforms for IoT using Apache Kafka</h3>
+                <h3>🛡 Securing Event Streaming Platforms for IoT using Apache Kafka</h3>
 
-  <p class="research-subtitle">
-    Master's Research Project · 2021
-  </p>
+                <p class="research-subtitle">
+                    Master's Research Project · 2021
+                </p>
 
-  <p>
-    This project explored security challenges in outsourced event-streaming
-    infrastructures for IoT applications. While Apache Kafka provides a
-    scalable and reliable platform for processing large volumes of data,
-    sensitive information remains exposed to third-party infrastructure
-    providers.
-  </p>
+                <p>
+                    This project explored security challenges in outsourced event-streaming
+                    infrastructures for IoT applications. While Apache Kafka provides a
+                    scalable and reliable platform for processing large volumes of data,
+                    sensitive information remains exposed to third-party infrastructure
+                    providers.
+                </p>
 
-  <p>
-    To address this issue, we designed and implemented a privacy-preserving
-    matching scheme integrated with Apache ZooKeeper. The proposed approach
-    enables producers and consumers to communicate through encrypted topic
-    identifiers, allowing authorized entities to discover and subscribe to
-    data streams without revealing the original topic names to the Kafka
-    server.
-  </p>
+                <p>
+                    To address this issue, we designed and implemented a privacy-preserving
+                    matching scheme integrated with Apache ZooKeeper. The proposed approach
+                    enables producers and consumers to communicate through encrypted topic
+                    identifiers, allowing authorized entities to discover and subscribe to
+                    data streams without revealing the original topic names to the Kafka
+                    server.
+                </p>
 
-  <p>
-    The project included the implementation of the matching algorithm as a
-    reusable Java library, the development of Kafka producer and consumer
-    applications, and the simulation of secure communication across multiple
-    Kafka servers. This work demonstrates how confidentiality can be enhanced
-    in distributed event-streaming systems while preserving scalability.
-  </p>
+                <p>
+                    The project included the implementation of the matching algorithm as a
+                    reusable Java library, the development of Kafka producer and consumer
+                    applications, and the simulation of secure communication across multiple
+                    Kafka servers. This work demonstrates how confidentiality can be enhanced
+                    in distributed event-streaming systems while preserving scalability.
+                </p>
 
-  <div class="links">
-    <a href="pdf-files/Kafka_s2.pdf" target="_blank">
-      📄 Project Report
-    </a>
-    <a href="https://github.com/phuongntmlc/SecuringKafka" target="_blank">
-      💻 Code
-    </a>
-  </div>
+                <div class="links">
+                    <a href="pdf-files/Kafka_s2.pdf" target="_blank" rel="noopener noreferrer">
+                        📄 Project Report
+                    </a>
+                    <a href="https://github.com/phuongntmlc/SecuringKafka" target="_blank" rel="noopener noreferrer">
+                        💻 Code
+                    </a>
+                </div>
 
-</div>
+            </article>
 
-<div class="research-item">
+            <article class="research-item">
 
-  <h3>🤖 Anti-Spam Detection using Machine Learning</h3>
+                <h3>🤖 Anti-Spam Detection using Machine Learning</h3>
 
-  <p>
-    This project investigated the application of machine learning techniques
-    for email spam detection. Using a labeled dataset of legitimate and spam
-    messages, we implemented and evaluated two classification approaches:
-    Naive Bayes Networks and Artificial Neural Networks.
-  </p>
+                <p>
+                    This project investigated the application of machine learning techniques
+                    for email spam detection. Using a labeled dataset of legitimate and spam
+                    messages, we implemented and evaluated two classification approaches:
+                    Naive Bayes Networks and Artificial Neural Networks.
+                </p>
 
-  <div class="links">
-    <a href="pdf-files/anti-spam-ml.pdf" target="_blank">
-      📄 Project Report
-    </a>
-    <a href="https://github.com/phuongntmlc/AI2_AntiSpam" target="_blank">
-      💻 Code
-    </a>
+                <div class="links">
+                    <a href="pdf-files/anti-spam-ml.pdf" target="_blank" rel="noopener noreferrer">
+                        📄 Project Report
+                    </a>
+                    <a href="https://github.com/phuongntmlc/AI2_AntiSpam" target="_blank" rel="noopener noreferrer">
+                        💻 Code
+                    </a>
 
-  </div>
+                </div>
 
-</div>
+            </article>
 
-<div class="research-item">
+            <article class="research-item">
 
-  <h3>📱 Trusted Food Supply Chain System using QR Code Verification</h3>
+                <h3>📱 Trusted Food Supply Chain System using QR Code Verification</h3>
 
-  <p class="research-subtitle">
-    Bachelor's Capstone Project (Final Year Project) · 2017
-  </p>
+                <p class="research-subtitle">
+                    Bachelor's Capstone Project (Final Year Project) · 2017
+                </p>
 
-  <p>
-    This capstone project focuses on building a complete food
-    traceability system that connects producers, transporters, sellers, and
-    consumers through QR code-based verification.
-  </p>
+                <p>
+                    This capstone project focuses on building a complete food
+                    traceability system that connects producers, transporters, sellers, and
+                    consumers through QR code-based verification.
+                </p>
 
-  <p>
-    The system consists of a management web platform operated by a competent
-    authority, where producers, transporters, and sellers must register their
-    product-related information. All submitted data is verified and approved
-    by an administrator before being validated in the system.
-  </p>
+                <p>
+                    The system consists of a management web platform operated by a competent
+                    authority, where producers, transporters, and sellers must register their
+                    product-related information. All submitted data is verified and approved
+                    by an administrator before being validated in the system.
+                </p>
 
-  <p>
-    Once approved, a unique QR code is automatically generated and sent to the
-    registrant via email. This QR code is attached to the physical product
-    and serves as a secure identifier linking the product to its entire supply
-    chain history.
-  </p>
+                <p>
+                    Once approved, a unique QR code is automatically generated and sent to the
+                    registrant via email. This QR code is attached to the physical product
+                    and serves as a secure identifier linking the product to its entire supply
+                    chain history.
+                </p>
 
-  <p>
-    Consumers can scan the QR code using an Android application to access full
-    product information, including details about the producer, transporter,
-    seller, and origin of the product, ensuring transparency and trust in the
-    food supply chain.
-  </p>
+                <p>
+                    Consumers can scan the QR code using an Android application to access full
+                    product information, including details about the producer, transporter,
+                    seller, and origin of the product, ensuring transparency and trust in the
+                    food supply chain.
+                </p>
 
-  <a href="https://dantri.com.vn/giao-duc/sinh-vien-fpt-giai-bai-toan-an-toan-thuc-pham-truoc-them-tet-mau-tuat-20171222155313684.htm" target="_blank"> 📰 Featured in Dan Tri (Vietnamese national online newspaper) </a>
+                <a href="https://dantri.com.vn/giao-duc/sinh-vien-fpt-giai-bai-toan-an-toan-thuc-pham-truoc-them-tet-mau-tuat-20171222155313684.htm" target="_blank" rel="noopener noreferrer"> 📰 Featured in Dan Tri (Vietnamese national online newspaper) </a>
 
-</div>
+            </article>
 
-</div>
-</section>
+        </div>
+    </section>
 
-<!-- TIMELINE -->
-<section id="timeline">
-<div class="container">
-  <h2>Academic &amp; Professional Timeline</h2>
+    <!-- TIMELINE -->
+    <section id="timeline">
+        <div class="container">
+            <h2>Academic &amp; Professional Timeline</h2>
 
-  <div class="timeline-wrapper">
+            <div class="timeline-wrapper">
 
-    <div class="center-line"></div>
+                <div class="center-line"></div>
 
-    <!-- ACADEMIC (LEFT) -->
-    <div class="timeline-column left">
-      <h3 class="timeline-title">🎓 Academic</h3>
+                <!-- ACADEMIC (LEFT) -->
+                <div class="timeline-column left">
+                    <h3 class="timeline-title">🎓 Academic</h3>
 
-      <div class="event">
-        <strong>2023 – Present</strong>
-        <p>PhD in Computer Science</p>
-        <span>UPPA / LIUPPA, France</span>
-      </div>
+                    <div class="event">
+                        <strong>2023 – Present</strong>
+                        <p>PhD in Computer Science</p>
+                        <span>UPPA / LIUPPA, France</span>
+                    </div>
 
-      <div class="event">
-        <strong>2020 – 2022</strong>
-        <p>Master in Cryptology &amp; Information Security</p>
-        <span>University of Limoges, France</span>
-      </div>
+                    <div class="event">
+                        <strong>2020 – 2022</strong>
+                        <p>Master in Cryptology &amp; Information Security</p>
+                        <span>University of Limoges, France</span>
+                    </div>
 
-      <div class="event">
-        <strong>2013 – 2017</strong>
-        <p>Bachelor of Software Engineering</p>
-        <span>FPT University, Vietnam</span>
-      </div>
-    </div>
+                    <div class="event">
+                        <strong>2013 – 2017</strong>
+                        <p>Bachelor of Software Engineering</p>
+                        <span>FPT University, Vietnam</span>
+                    </div>
+                </div>
 
-    <!-- PROFESSIONAL (RIGHT) -->
-    <div class="timeline-column right">
-      <h3 class="timeline-title">💼 Professional</h3>
+                <!-- PROFESSIONAL (RIGHT) -->
+                <div class="timeline-column right">
+                    <h3 class="timeline-title">💼 Professional</h3>
 
-      <div class="event">
-        <strong>2022</strong>
-        <p>Research Internship</p>
-        <span>INRIA Privatics / CITI Lab, France</span>
-      </div>
+                    <div class="event">
+                        <strong>2022</strong>
+                        <p>Research Internship</p>
+                        <span>INRIA Privatics / CITI Lab, France</span>
+                    </div>
 
-      <div class="event">
-        <strong>2017 – 2020</strong>
-        <p>Game Programmer</p>
-        <span>Gameloft Hanoi, Vietnam</span>
-      </div>
+                    <div class="event">
+                        <strong>2017 – 2020</strong>
+                        <p>Game Programmer</p>
+                        <span>Gameloft Hanoi, Vietnam</span>
+                    </div>
 
-      <div class="event">
-        <strong>2016 – 2017</strong>
-        <p>Software Developer</p>
-        <span>FPT Software, Vietnam</span>
-      </div>
-    </div>
+                    <div class="event">
+                        <strong>2016 – 2017</strong>
+                        <p>Software Developer</p>
+                        <span>FPT Software, Vietnam</span>
+                    </div>
+                </div>
 
-  </div>
-</div>
-</section>
+            </div>
+        </div>
+    </section>
 
 
-<footer>
-  © 2026 Phuong Nguyen
-</footer>
+    <footer>
+        © 2026 Phuong Nguyen
+    </footer>
 
 </body>
+
 </html>
